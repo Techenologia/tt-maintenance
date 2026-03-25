@@ -3,29 +3,25 @@ Modules/Dev/
 Modules/Fintech/
 Modules/Telecom/
 
-# Migrations liées aux modules privés
-Migrations/20260321121030_AddFintechTables.cs
-Migrations/20260321121030_AddFintechTables.Designer.cs
+# Migrations (toutes — contiennent des données privées)
+Migrations/
 
-# Node
+# Fichiers de configuration privés
+appsettings.Development.json
+.env
+.env.local
+
+# Fichiers locaux inutiles
+Controllers/
+Properties/
+*.http
 ttm-backend/
 
 # Build
 bin/
 obj/
 
-# Config sensible
-appsettings.Development.json
-.env
-.env.local
-
 # IDE
 .idea/
 .vs/
 *.user
-
-# Fichiers privés
-Controllers/
-Migrations/
-Properties/
-*.http
