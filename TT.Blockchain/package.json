@@ -1,0 +1,1 @@
+{"name":"ttm-blockchain","version":"1.0.0","description":"TTM Token - BNB Chain","main":"index.js","scripts":{"test":"npx hardhat test","compile":"npx hardhat compile","deploy:testnet":"npx hardhat run scripts/deploy.js --network bnbTestnet"},"devDependencies":{"@nomicfoundation/hardhat-toolbox":"^2.0.2","dotenv":"^17.3.1","hardhat":"^2.22.0"}}
