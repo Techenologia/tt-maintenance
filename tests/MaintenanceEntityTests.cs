@@ -1,3 +1,6 @@
+﻿// Copyright (c) 2026 T&T Technologia
+// Licensed under the MIT License. See LICENSE in the project root.
+
 using FluentAssertions;
 using TT.Backend.Modules.Maintenance.Entities;
 using Xunit;
@@ -101,3 +104,4 @@ public class MaintenanceEntityTests
         tx.Fees.Should().Be(5m);
     }
 }
+

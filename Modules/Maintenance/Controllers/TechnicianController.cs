@@ -1,3 +1,6 @@
+﻿// Copyright (c) 2026 T&T Technologia
+// Licensed under the MIT License. See LICENSE in the project root.
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TT.Backend.Modules.Maintenance.DTOs;
@@ -57,3 +60,4 @@ namespace TT.Backend.Modules.Maintenance.Controllers
         }
     }
 }
+

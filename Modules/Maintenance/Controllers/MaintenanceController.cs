@@ -1,3 +1,6 @@
+﻿// Copyright (c) 2026 T&T Technologia
+// Licensed under the MIT License. See LICENSE in the project root.
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TT.Backend.Modules.Maintenance.Services;
@@ -29,7 +32,7 @@ namespace TT.Backend.Modules.Maintenance.Controllers
         {
             var task = await _service.GetTaskById(id);
             if (task == null)
-                return NotFound(new { error = "Tâche introuvable", id });
+                return NotFound(new { error = "TÃ¢che introuvable", id });
             return Ok(task);
         }
 
@@ -37,9 +40,10 @@ namespace TT.Backend.Modules.Maintenance.Controllers
         public async Task<IActionResult> Create([FromBody] MaintenanceTaskEntity task)
         {
             if (task == null)
-                return BadRequest(new { error = "Données invalides" });
+                return BadRequest(new { error = "DonnÃ©es invalides" });
             await _service.CreateTask(task);
             return CreatedAtAction(nameof(GetById), new { id = task.Id }, task);
         }
     }
 }
+

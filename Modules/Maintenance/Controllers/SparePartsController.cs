@@ -1,3 +1,6 @@
+﻿// Copyright (c) 2026 T&T Technologia
+// Licensed under the MIT License. See LICENSE in the project root.
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TT.Backend.Modules.Maintenance.DTOs;
@@ -23,7 +26,7 @@ namespace TT.Backend.Modules.Maintenance.Controllers
         public ActionResult GetById(Guid id)
         {
             var part = _service.GetPartById(id);
-            if (part == null) return NotFound(new { error = "Pièce introuvable" });
+            if (part == null) return NotFound(new { error = "PiÃ¨ce introuvable" });
             return Ok(part);
         }
 
@@ -60,3 +63,4 @@ namespace TT.Backend.Modules.Maintenance.Controllers
         }
     }
 }
+

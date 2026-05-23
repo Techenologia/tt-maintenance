@@ -1,3 +1,6 @@
+﻿// Copyright (c) 2026 T&T Technologia
+// Licensed under the MIT License. See LICENSE in the project root.
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TT.Backend.Modules.Maintenance.DTOs;
@@ -27,7 +30,7 @@ namespace TT.Backend.Modules.Maintenance.Controllers
         {
             var equipment = await _service.GetEquipmentById(id);
             if (equipment == null)
-                return NotFound(new { error = "Équipement introuvable", id });
+                return NotFound(new { error = "Ã‰quipement introuvable", id });
             return Ok(equipment);
         }
 
@@ -46,10 +49,11 @@ namespace TT.Backend.Modules.Maintenance.Controllers
         {
             var exists = await _service.GetEquipmentById(id);
             if (exists == null)
-                return NotFound(new { error = "Équipement introuvable", id });
+                return NotFound(new { error = "Ã‰quipement introuvable", id });
 
             await _service.UpdateStatus(id, status);
             return NoContent();
         }
     }
 }
+
